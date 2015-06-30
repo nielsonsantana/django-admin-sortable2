@@ -1,9 +1,9 @@
 /* styles for list view */
-#result_list thead th:nth-child(2) {
+#result_list thead th:nth-child(2), .result-list thead th:nth-child(2) {
 	width: 50px;
 }
 
-#result_list div.drag {
+#result_list div.drag, .result-list div.drag {
 	background: url(../icons/drag.png) repeat 0px 0px;
 	cursor: pointer;
 }

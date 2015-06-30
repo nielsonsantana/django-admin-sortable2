@@ -22,13 +22,13 @@ jQuery(function($) {
 	var startorder, endorder;
 	var csrfvalue = $('form').find('input[name="csrfmiddlewaretoken"]').val();
 
-	$('#result_list').sortable({
+	$('.result-list').sortable({
 		handle: 'div.drag',
 		items: 'tr',
 		axis: 'y',
 		scroll: true,
 		cursor: 'ns-resize',
-		containment: $('#result_list tbody'),
+		containment: $('.result-list tbody'),
 		tolerance: 'pointer',
 		start: function(event, dragged_rows) {
 			$(this).find('thead tr th').each(function(index) {
@@ -70,5 +70,5 @@ jQuery(function($) {
 			});
 		}
 	});
-	$('#result_list, tbody, tr, td, th').disableSelection();
+	$('.result-list, tbody, tr, td, th').disableSelection();
 });
