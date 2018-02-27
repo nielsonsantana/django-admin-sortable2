@@ -4,6 +4,99 @@
 Release history
 ===============
 
+0.6.19
+------
+* Fix #183: Use ``mark_safe`` for reorder ``div``.
+
+0.6.18
+------
+* Fixes meth:`adminsortable2.admin.SortableInlineAdminMixin.get_fields`: Always return
+  a list instead of sometimes a tuple.
+
+0.6.17
+------
+* Fixes #171: Adhere to Content Security Policy best practices by removing inline scripts.
+* Adopted to Django-2.0 keeping downwards compatibility until Django-1.9.
+* Better explanation what to do in case of sorting inconsistency.
+
+0.6.16
+------
+* Fixes #137: Allow standard collapsible tabular inline.
+
+0.6.15
+------
+* Fixes #164: TypeError when ``display_list`` in admin contains a callable.
+# Fixes #160: Updated ordering values not getting saved in Tabluar/StackedInlineAdmin.
+
+0.6.14
+------
+* Fixes #162: In model admin, setting ``actions`` to ``None`` or ``[]`` breaks the
+  sortable functionality.
+
+0.6.13
+------
+* Fixes #159: Make stacked inline's header more clear that it is sortable.
+
+0.6.12
+------
+* Fixes #155: Sortable column not the first field by default.
+
+0.6.11
+------
+* Fixes #147: Use current admin site name instead of 'admin'.
+* Fixes #122: Columns expand continuously with each sort.
+
+0.6.9 and 0.6.10
+----------------
+* Fixes Issue #139: better call of post_save signal.
+
+0.6.8
+-----
+* Fixes Issue #135: better call of pre_save signal.
+* On ``./manage.py reorder ...``, name the model using ``app_label.model_name`` rather than
+  requiring the fully qualified path.
+* In :class:`adminsortable2.admin.SortableAdminMixin` renamed method ``update`` to ``update_order``,
+  to prevent potential naming conflicts.
+
+0.6.7
+-----
+* Added class ``PolymorphicSortableAdminMixin`` so that method ``get_max_order`` references
+  the ordering field from the base model.
+
+
+0.6.6
+-----
+* Fixed: Drag'n Drop reordering now send [pre|post]_save signals for all updated instances.
+
+0.6.5
+-----
+* Fixed: Reorder management command now accepts args.
+
+
+0.6.4
+-----
+* Drop support for Django-1.5.
+* change_list_template now is extendible.
+* Fixed concatenation if ``exclude`` is tuple.
+* Support reverse sorting in CustomInlineFormSet.
+
+0.6.3
+-----
+* setup.py ready for Python 3.
+
+0.6.2
+-----
+* Fixed regression from 0.6.0: Multiple sortable inlines are now possible again.
+
+0.6.1
+-----
+* Removed global variables from Javascript namespace.
+
+0.6.0
+-----
+* Compatible with Django 1.9.
+* In the list view, it now is possible to move items to any arbitrary page.
+
 0.5.0
 -----
 * Changed the namespace from adminsortable to adminsortable2 to allow both this

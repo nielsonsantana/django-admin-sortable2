@@ -1,5 +1,11 @@
+/* hide action input fields */
+#changelist-form-step, #changelist-form-page {
+	display: none;
+	margin-left: 0.5em;
+}
+
 /* styles for list view */
-#result_list thead th:nth-child(2), .result-list thead th:nth-child(2) {
+#result_list thead th.column-_reorder {
 	width: 50px;
 }
 
@@ -14,13 +20,17 @@ div.inline-group table.ui-sortable tr.form-row.has_original td.drag {
 	background-repeat: repeat;
 	width: 20px;
 }
-div.inline-group table.ui-sortable tr.form-row.has_original td.original {
-	position: relative;
+div.inline-group table.ui-sortable tr.form-row.has_original td.original p {
+	left: initial;
 }
+
 div.inline-group table.ui-sortable tr.form-row td.is_hidden {
 	display: none;
 }
 /* styles for stacked inlines */
+div.inline-group.ui-sortable div.inline-related.has_original h3 {
+	background: url(../icons/drag.png) repeat;
+}
 div.inline-group.ui-sortable div.inline-related.has_original h3:hover {
 	cursor: pointer;
 }

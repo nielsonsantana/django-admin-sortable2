@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
-from django.conf.urls import patterns, include
+from __future__ import unicode_literals
+
+from django.conf.urls import url, include
 from django.contrib import admin
+
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    (r'^admin/', include(admin.site.urls)),
-)
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+]
